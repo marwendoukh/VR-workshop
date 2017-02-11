@@ -1,0 +1,70 @@
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop 2</title>
+
+		<meta name="description" content="workshop">
+		<meta name="author" content="Marwen Doukh">
+<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+	</head>
+
+
+	<body>
+
+
+<a-scene>
+
+
+
+	<!-- Image -->
+ <a-sky src="space.jpg" rotation="0 -130 0"></a-sky>
+
+
+
+<!--  BOX -->
+<a-box height="3" color="#FFC65D" ></a-box>
+
+
+
+
+ <!--  Cone with animation -->
+
+ <a-entity>
+   <a-entity position="5 0 0"></a-entity>
+
+	 <!--animation-->
+   <a-animation attribute="rotation"
+                dur="10000"
+                fill="forwards"
+                to="0 360 0"
+                repeat="indefinite"></a-animation>
+
+		<!-- cone -->
+								<a-cone position="0 0 -20" rotation="35 45 30" height="10" radius-top="2"
+							  radius-bottom="10" color="#F3BA8D"></a-cone>
+
+ </a-entity>
+
+
+<!-- 3d Model -->
+ <a-asset-item id="tree" src="3dmodels/man.dae"></a-asset-item>
+</a-assets>
+
+<a-collada-model  position ="-12 4 0"  src="#tree" rotation="0 0 0"></a-collada-model>
+
+
+
+ <!-- Camera -->
+ <a-entity position="-8 -2 3.8">
+ <a-camera></a-camera>
+ </a-entity>
+
+
+
+</a-scene>
+
+
+</body>
+</html>
